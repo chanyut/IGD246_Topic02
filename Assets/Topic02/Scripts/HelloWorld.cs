@@ -3,17 +3,18 @@ using System.Collections;
 
 public class HelloWorld : MonoBehaviour
 {
-    void Awake() {
+    void Awake() 
+    {
         Debug.Log("Hello world - Awake");
     }
 
     void Start()
     {
-        Debug.Log("Hello world - Start");
+        Debug.LogWarning("Hello world - Start");
     }
 
     void Update()
     {
-        Debug.Log("Hello world - Update");
+        Debug.LogError("Hello world - Update");
     }
 }
