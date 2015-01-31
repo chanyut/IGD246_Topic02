@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TreasureBoxBuilder : MonoBehaviour {
     public GameObject TreasureBoxPrefab;
-    public Vector3 CreatePostion;
+    public GameObject CreatePostionProxy;
 
     void Start() {
         Debug.Log("TreasureBoxBuild - Start");
@@ -12,7 +12,7 @@ public class TreasureBoxBuilder : MonoBehaviour {
     void Update() {
         if (Input.GetMouseButtonDown(0)) { 
             Vector3 pos = new Vector3(0, 0, 0);
-            pos = CreatePostion;
+            pos = CreatePostionProxy.transform.position;
             GameObject newTreasureBox = Instantiate(
                 TreasureBoxPrefab, pos, Quaternion.identity) as GameObject;
             if (newTreasureBox.rigidbody != null) {
